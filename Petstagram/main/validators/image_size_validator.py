@@ -1,6 +1,9 @@
 from django.core.exceptions import ValidationError
+from django.utils.deconstruct import deconstructible
 
-class ValidateImage():
+
+@deconstructible
+class ValidateImage:
     def __init__(self, file):
         self.file = file
 
