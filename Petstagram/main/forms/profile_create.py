@@ -2,21 +2,7 @@ from django import forms
 
 
 # <form>
-#                 <div class="form-group">
-#                     <label for="first_name">First Name</label>
-#                     <input type="text" class="form-control" name="first_name" maxlength="30" required
-#                            placeholder="Enter first name" id="first_name"/>
-#                 </div>
-#                 <div class="form-group">
-#                     <label for="id_last_name">Last Name</label>
-#                     <input type="text" class="form-control" name="last_name" maxlength="30" required
-#                            placeholder="Enter last name" id="id_last_name"/>
-#                 </div>
-#                 <div class="form-group">
-#                     <label for="id_image">Link to Profile Image</label>
-#                     <input type="url" class="form-control" name="profile_image" required id="id_image"
-#                     placeholder="Enter URL"/>
-#                 </div>
+
 #                 <button class="btn btn-primary mt-2" type="submit">Create</button>
 #             </form>
 from Petstagram.main.models.profile import ProfileModel
