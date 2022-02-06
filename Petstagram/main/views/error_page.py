@@ -8,5 +8,5 @@ def is_authenticated(func):
     return main
 
 
-def error_page(req):
+def error_page(req, exception=None):
     return render(req, "401_error.html")
