@@ -3,6 +3,6 @@ from django.views import View
 
 
 class CreateProfileView(View):
-    def get(self , req):
+    def get(self, req):
         # going to make form
-        return render(req , "")
+        return render(req, "profile_create.html")
