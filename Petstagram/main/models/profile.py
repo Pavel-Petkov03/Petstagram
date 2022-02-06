@@ -10,10 +10,10 @@ class ProfileModel(models.Model):
     MIN_SECOND_NAME_LENGTH = 2
 
     first_name = models.CharField(max_length=30, validators=[
-        NameValidator(MIN_FIRST_NAME_LENGTH, MAX_FIRST_NAME_LENGTH, "first_name")
+        NameValidator(MIN_FIRST_NAME_LENGTH, MAX_FIRST_NAME_LENGTH, "first_name"),
     ])
     last_name = models.CharField(max_length=30, validators=[
-        NameValidator(MIN_SECOND_NAME_LENGTH, MAX_SECOND_NAME_LENGTH, "second_name")
+        NameValidator(MIN_SECOND_NAME_LENGTH, MAX_SECOND_NAME_LENGTH, "second_name"),
     ])
     profile_picture = models.URLField()
 

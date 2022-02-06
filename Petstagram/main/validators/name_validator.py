@@ -1,6 +1,8 @@
 from django.core.exceptions import ValidationError
+from django.utils.deconstruct import deconstructible
 
 
+@deconstructible
 class NameValidator:
     def __init__(self, min_length, max_length, name_of_field):
         self.min_length = min_length
