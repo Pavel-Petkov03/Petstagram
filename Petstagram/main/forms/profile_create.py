@@ -26,5 +26,9 @@ class CreateProfileForm(forms.ModelForm):
     }))
 
     class Meta:
-        fields = "__all__"
+        fields = ["first_name", "last_name", "profile_picture"]
         model = ProfileModel
+
+
+class EditForm(CreateProfileForm):
+   pass

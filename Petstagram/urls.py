@@ -22,4 +22,4 @@ urlpatterns = [
     path("", include("Petstagram.main.urls"))
 ]
 
-# handler400 = error_page
+handler400 = error_page

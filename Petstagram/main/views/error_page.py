@@ -1,12 +1,14 @@
+from django.http import HttpResponseBadRequest
 from django.shortcuts import render
 
 from Petstagram.main.models import ProfileModel
 
 
-def is_authenticated_middleware(func):
+def is_authenticated_decorator(func):
     def main(*args, **kwargs):
-        # will add profile logic
-        return func(*args, **kwargs)
+        if check_if_has_profile():
+            return func(*args, **kwargs)
+        raise HttpResponseBadRequest
     return main
 
 
