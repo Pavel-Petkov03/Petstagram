@@ -21,3 +21,6 @@ class PetImage(models.Model):
     class Meta:
         db_table = "pet_image"
         app_label = "main"
+
+
+
