@@ -19,7 +19,7 @@ class PetModel(models.Model):
     type = models.TextField(choices=CHOICES, default="")
 
     description = models.TextField(default="")
-    date = models.DateTimeField(default=datetime.now())
+    date = models.DateTimeField()
     likes = models.IntegerField()
 
     class Meta:

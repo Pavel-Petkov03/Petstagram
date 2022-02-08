@@ -17,3 +17,7 @@ class PetImage(models.Model):
 
     creation_date = models.DateTimeField()
     likes = models.IntegerField()
+
+    class Meta:
+        db_table = "pet_image"
+        app_label = "main"

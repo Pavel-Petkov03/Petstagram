@@ -31,7 +31,7 @@ class ProfileModel(models.Model):
 
     # optional
 
-    date_of_birth = models.DateTimeField(default=datetime.now())
+    date_of_birth = models.DateTimeField()
     description = models.TextField(default="")
     email = models.EmailField(validators=[
         EmailValidator()

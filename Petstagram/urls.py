@@ -23,3 +23,11 @@ urlpatterns = [
 ]
 
 handler400 = error_page
+handler404 = error_page
+from django.http import HttpResponseBadRequest , HttpResponseNotFound
+
+"""
+    400 -> bad request
+    raise Http HttpResponseBadRequest
+    raise Http not fond
+"""

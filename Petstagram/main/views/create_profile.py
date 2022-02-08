@@ -9,8 +9,11 @@ class ProfileView(View):
     def get(self, req):
         if check_if_has_profile():
             return render(req, "profile_details.html")
-        else:
-            form = CreateProfileForm()
-            return render(req, "profile_create.html", {
-                "form": form
-            })
+        form = CreateProfileForm()
+        return render(req, "profile_create.html", {
+            "form": form
+        })
+
+
+
+
