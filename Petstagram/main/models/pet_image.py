@@ -6,7 +6,7 @@ from Petstagram.main.validators.image_size_validator import ValidateImage
 
 class PetImage(models.Model):
     NAME_MAX_LENGTH = 30
-    photo = models.FileField(validators=[
+    photo = models.ImageField(validators=[
         ValidateImage(5)
     ])
     tagged_pets = ArrayField(
