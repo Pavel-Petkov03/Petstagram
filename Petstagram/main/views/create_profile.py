@@ -13,9 +13,9 @@ class ProfileView(View):
             total_images = PetImage.objects.all()
             total_likes = sum([image.likes for image in total_images])
             total_pets = PetModel.objects.all()
-            return render(req, "profile_details.html",
-                          {"profile": profile, "likes": total_likes, "images": total_images.__len__()}, "total_pets",
-                          total_pets)
+            context = {"profile": profile, "likes": total_likes, "images": total_images.__len__(),
+                       "total_pets": total_pets}
+            return render(req, "profile_details.html", context)
         form = CreateProfileForm()
         return render(req, "profile_create.html", {
             "form": form
