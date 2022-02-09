@@ -15,10 +15,10 @@ class NameValidator:
                 f"The {self.name_of_filed} must be max {self.max_length} and min {self.min_length} and consist only letters")
 
     def check_min_length(self, value):
-        return value.__len__ < self.min_length
+        return value.__len__() < self.min_length
 
     def check_max_length(self, value):
-        return value.__len__ > self.max_length
+        return value.__len__() > self.max_length
 
     @staticmethod
     def check_if_only_letters_exist(value):

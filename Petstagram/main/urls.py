@@ -5,5 +5,5 @@ from Petstagram.main.views.home import HomeView
 
 urlpatterns = [
     path("", HomeView.as_view()),
-    path("create", ProfileView.as_view()),
+    path("profile", ProfileView.as_view()),
 ]

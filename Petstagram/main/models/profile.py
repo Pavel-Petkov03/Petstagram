@@ -20,23 +20,23 @@ class ProfileModel(models.Model):
     )
 
     # required
-    first_name = models.CharField(max_length=30, validators=[
+    first_name = models.CharField(max_length=MAX_FIRST_NAME_LENGTH, validators=[
         NameValidator(MIN_FIRST_NAME_LENGTH, MAX_FIRST_NAME_LENGTH, "first_name"),
 
     ], blank=False)
-    last_name = models.CharField(max_length=30, validators=[
+    last_name = models.CharField(max_length=MAX_SECOND_NAME_LENGTH, validators=[
         NameValidator(MIN_SECOND_NAME_LENGTH, MAX_SECOND_NAME_LENGTH, "second_name"),
     ], blank=False)
-    profile_picture = models.URLField(blank=None)
+    profile_picture = models.URLField(blank=False)
 
     # optional
 
-    date_of_birth = models.DateTimeField()
-    description = models.TextField(default="")
+    date_of_birth = models.DateField(blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
     email = models.EmailField(validators=[
         EmailValidator()
-    ], default="")
-    gender = models.TextField(choices=GENDER_OPTION, default="")
+    ], blank=True, null=True)
+    gender = models.TextField(choices=GENDER_OPTION, blank=True, null=True)
 
     class Meta:
         db_table = "profile"

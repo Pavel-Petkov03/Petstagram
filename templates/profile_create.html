@@ -1,30 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-{%  include "head.html" %}
-
-<body>
-
-
-{% include "navigation.html" %}
-
-<div class="container mb-5">
-    <h1 class="text-center">Create Your Profile</h1>
-    <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form }}
-                <button class="btn btn-primary mt-2" type="submit">Create</button>
-            </form>
+{% extends "base.html" %}
+{% block container %}
+    <div class="container mb-5">
+        <h1 class="text-center">Create Your Profile</h1>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button class="btn btn-primary mt-2" type="submit">Create</button>
+                </form>
+            </div>
+            <div class="col-lg-3"></div>
         </div>
-        <div class="col-lg-3"></div>
     </div>
-</div>
-</body>
-
-{% include "scripts.html" %}
-{% include "footer.html" %}
-
-</html>
+{% endblock %}

@@ -9,5 +9,7 @@ class DeleteProfileView(View):
     def get(self, req):
         return render(req, "profile_delete.html")
 
+    @is_authenticated_decorator
     def post(self):
         pass
+
