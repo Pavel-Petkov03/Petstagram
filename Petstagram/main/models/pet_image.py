@@ -17,7 +17,7 @@ class PetImage(models.Model):
 
     description = models.TextField()
 
-    creation_date = models.DateTimeField()
+    creation_date = models.DateTimeField(auto_now_add=True)
     likes = models.IntegerField()
     pet_id = models.ForeignKey(PetModel, on_delete=models.CASCADE, default="")
 

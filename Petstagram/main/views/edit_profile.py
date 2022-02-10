@@ -14,6 +14,7 @@ class EditProfileView(View):
             "form": form
         })
 
+    @is_authenticated_decorator
     def post(self, req):
         form = ProfileEditForm(req.POST, instance=ProfileModel.objects.first())
         if form.is_valid():
