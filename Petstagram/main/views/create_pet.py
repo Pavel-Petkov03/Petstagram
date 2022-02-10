@@ -21,3 +21,6 @@ class CreatePetView(View):
         return render(req, "pet_create.html", {
             "form": form
         })
+
+
+

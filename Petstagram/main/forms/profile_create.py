@@ -15,7 +15,7 @@ class CreateProfileForm(forms.ModelForm):
         "type": "text", "class": "form-control", "name": "second_name", "maxlength": 30, "required": True,
         "placeholder": "Enter second name", "id": "id_last_name"
     }))
-    profile_picture = forms.URLField(label="Link to Profile Image", max_length=30, widget=forms.URLInput(attrs={
+    profile_picture = forms.URLField(label="Link to Profile Image", widget=forms.URLInput(attrs={
         "type": "url", "class": "form-control", "name": "profile_image", "required": True,
         "placeholder": "Enter URL", "id": "id_image"
     }))

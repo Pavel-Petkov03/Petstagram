@@ -14,6 +14,7 @@ class ProfileEditForm(CreateProfileForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={
         "style": "display:block"
     }))
+    profile_picture = forms.URLField(widget=forms.URLInput())
 
     # gender = forms.ChoiceField(widget=forms.Select(attrs={}))
     class Meta(CreateProfileForm.Meta):
