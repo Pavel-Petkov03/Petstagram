@@ -15,10 +15,7 @@ class PetModel(models.Model):
 
     name = models.CharField(max_length=NAME_MAX_LENGTH, unique=True)
     type = models.TextField(choices=CHOICES, default="")
-
-    description = models.TextField(default="")
-    date = models.DateTimeField()
-    likes = models.IntegerField()
+    date = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         db_table = "pet"

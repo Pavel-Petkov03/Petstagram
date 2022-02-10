@@ -11,15 +11,12 @@ class PetImage(models.Model):
     photo = models.ImageField(validators=[
         ValidateImage(MAX_IMAGE_SIZE)
     ])
-    tagged_pets = ArrayField(
-        models.TextField(models.CharField(max_length=NAME_MAX_LENGTH)
-                         ))
+    tagged_pets = models.ManyToManyField(PetModel)
 
     description = models.TextField()
 
-    creation_date = models.DateTimeField(auto_now_add=True)
+    creation_date = models.DateTimeField()
     likes = models.IntegerField()
-    pet_id = models.ForeignKey(PetModel, on_delete=models.CASCADE, default="")
 
     class Meta:
         db_table = "pet_image"
