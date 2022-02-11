@@ -27,3 +27,6 @@ class ProfileView(View):
             form.save()
             return redirect("/")
         return render(req, "profile_create.html", {"form": form})
+
+
+

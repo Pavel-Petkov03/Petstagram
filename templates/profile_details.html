@@ -26,23 +26,21 @@
                         <h5><u>Description:</u> {{ profile.description }}</h5>
                     {% endif %}
                 </div>
-                <p class="mt-2">Total Images: {{ total_images }}</p>
-                <p class="mt-2">Total Likes: {{ total_likes }}</p>
+                <p class="mt-2">Total Images: {{ images }}</p>
+                <p class="mt-2">Total Likes: {{ likes }}</p>
                 <a href="/profile/edit" class="btn btn-primary">Edit</a>
                 <a href="/profile/delete" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
 <h2 class="text-center">My Pets</h2>
-{% block contaier %}
     <div class="container mb-4">
     <div class="d-flex justify-content-start mb-5">
         {% for pet in total_pets %}
              <div style="width: 18rem;">
                 <h5>{{ pet.name }}</h5>
-                <p class="mt-2">Age: {{ pet.age }}</p>
+                <p class="mt-2">Age: {{ pet.date }}</p>
                 <a href="#" class="btn btn-primary">Edit</a>
                 <a href="#" class="btn btn-danger">Delete</a>
             </div>
@@ -50,5 +48,4 @@
     </div>
 </div>
 {% endblock %}
-
 
