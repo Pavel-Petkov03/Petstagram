@@ -15,7 +15,7 @@ class PetCreateForm(forms.ModelForm):
 
     class Meta:
         model = PetModel
-        fields = ["name", "date", "type"]
+        fields = ["name", "type", "date"]
         labels = {
             "name": "Pet Name",
             "type": "Type:",

@@ -28,8 +28,8 @@
                 </div>
                 <p class="mt-2">Total Images: {{ images }}</p>
                 <p class="mt-2">Total Likes: {{ likes }}</p>
-                <a href="/profile/edit" class="btn btn-primary">Edit</a>
-                <a href="/profile/delete" class="btn btn-danger">Delete</a>
+                <a href="{% url "profile-edit"%}" class="btn btn-primary">Edit</a>
+                <a href="{% url "profile-delete"%}" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
@@ -41,8 +41,8 @@
              <div style="width: 18rem;">
                 <h5>{{ pet.name }}</h5>
                 <p class="mt-2">Age: {{ pet.date }}</p>
-                <a href="#" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <a href="{% url "pet-edit" pet.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url "pet-delete" pet.id %}" class="btn btn-danger">Delete</a>
             </div>
         {% endfor %}
     </div>

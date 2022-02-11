@@ -1,4 +1,5 @@
-<!-- Navigation Bar -->
+{% load check_profile %}
+{% is_authenticated as check_authenticated %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:2%">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,8 +8,23 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="{% url "home" %}">Home</a>
             </li>
+            {% if check_authenticated %}
+
+                <li class="nav-item">
+{#                    <a class="nav-link" href="{% url "dashboard" %}">Dashboard</a>#}
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url "pet-create" %}">Add Pet</a>
+                </li>
+                <li class="nav-item">
+{#                    <a class="nav-link" href="{% url "add-photo" %}">Add Photo</a>#}
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url "profile" %}">Profile</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
